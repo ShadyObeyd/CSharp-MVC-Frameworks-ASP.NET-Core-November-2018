@@ -1,0 +1,29 @@
+﻿@model CHUSHKA.App.ViewModels.Users.RegisterViewModel
+
+<h1 class="text-center">Register</h1>
+<hr class="bg-secondary half-width" />
+<form class="mx-auto half-width" asp-controller="users" asp-action="register" method="post">
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input asp-for="Username" type="text" class="form-control" placeholder="Username...">
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="Password...">
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password...">
+    </div>
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" type="text" class="form-control" placeholder="Full Name...">
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" type="email" class="form-control" placeholder="Email...">
+    </div>
+    <div class="button-holder d-flex justify-content-center">
+        <button type="submit" class="btn chushka-bg-color">Register</button>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+﻿@using System.Collections.Generic;
+@using FDMC.Models;
+@model List<Cat>
+<h1>Fluffy Duffy Munchkin Cats</h1>
+<ul>
+    @foreach (Cat cat in Model)
+    {
+        <li><a href="/Cats/Cat?id=@cat.Id">@cat.Name</a></li>
+    }
+</ul>
+<a href="/Cats/Add"><button>Add Cat</button></a>

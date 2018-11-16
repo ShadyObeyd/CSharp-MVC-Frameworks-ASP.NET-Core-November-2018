@@ -1,0 +1,17 @@
+﻿@model CHUSHKA.App.ViewModels.Users.LoginViewModel
+
+<h1 class="text-center">Login</h1>
+<hr class="bg-secondary half-width" />
+<form class="mx-auto half-width" asp-controller="users" asp-action="login" method="post">
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input asp-for="Username" type="text" class="form-control" placeholder="Username...">
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="Password...">
+    </div>
+    <div class="button-holder d-flex justify-content-center">
+        <button type="submit" class="btn chushka-bg-color">Login</button>
+    </div>
+</form>
