@@ -1,0 +1,56 @@
+﻿.app {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: black;
+}
+
+.half-width {
+    width: 30%;
+}
+
+textarea {
+    resize: none;
+}
+
+.eventures-bg-color {
+    background-color: #AFEEEE;
+    color: black;
+}
+
+.nav-link-dark {
+    color: dodgerblue
+}
+
+.hr-2 {
+    height: 2px;
+}
+
+.hr-1 {
+    height: 1px;
+}
+
+hr {
+    background-color: #AFEEEE;
+    height: 2px;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #DC143C;
+    color: #F8F8FF;
+}
+
+footer {
+    bottom: 0;
+    border: 0;
+    height: auto;
+    width: 98%;
+    background-color: #AFEEEE;
+}
+
+.login{
+    margin: 3px;
+    color: blue;
+}

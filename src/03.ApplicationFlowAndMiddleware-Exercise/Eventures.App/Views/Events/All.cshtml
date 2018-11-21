@@ -1,0 +1,28 @@
+﻿<h1 class="text-center">All Events</h1>
+<hr />
+<table class="table w-75 mx-auto">
+    <thead>
+        <tr class="row">
+            <th class="col-md-1 font-weight-bold">#</th>
+            <th class="col-md-4 font-weight-bold">Name</th>
+            <th class="col-md-2 font-weight-bold">Start</th>
+            <th class="col-md-2 font-weight-bold">End</th>
+            <th class="col-md-3 font-weight-bold">Place</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var index = 1;}
+        @foreach (var eventt in Model)
+        {
+            <tr class="row">
+                <th class="col-md-1">@index</th>
+                <th class="col-md-4">@eventt.Name</th>
+                <td class="col-md-2">@eventt.StartToStr</td>
+                <td class="col-md-2">@eventt.EndToStr</td>
+                <td class="col-md-3">@eventt.Place</td>
+            </tr>
+            { index++; }
+        }
+    </tbody>
+</table>
+<hr />

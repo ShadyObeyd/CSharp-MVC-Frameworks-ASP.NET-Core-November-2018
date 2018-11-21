@@ -1,0 +1,53 @@
+﻿@model Eventures.App.ViewModels.Events.CreateEventViewModel
+
+<h1 class="text-center">Register</h1>
+<hr style="width: 30%" />
+<form class="mx-auto half-width" asp-controller="Events" asp-action="Create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="Name"></label>
+            </div>
+            <input asp-for="Name" type="text" class="form-control" placeholder="Name..." />
+        </div>
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="Place"></label>
+            </div>
+            <input asp-for="Place" type="text" class="form-control" placeholder="Place..." />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="Start"></label>
+            </div>
+            <input asp-for="Start" type="datetime" class="form-control" placeholder="Start..." />
+        </div>
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="End"></label>
+            </div>
+            <input asp-for="End" type="datetime" class="form-control" placeholder="End..." />
+        </div>
+    </div>
+    <hr />
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="TotalTickets"></label>
+            </div>
+            <input asp-for="TotalTickets" type="number" class="form-control" placeholder="Total Tickets..." />
+        </div>
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="PricePerTicket"></label>
+            </div>
+            <input asp-for="PricePerTicket" type="number" step="0.01" class="form-control" placeholder="Total Tickets..." />
+        </div>
+    </div>
+    <hr />
+    <div class="button-holder d-flex justify-content-center" style="margin-bottom: 20px">
+        <button type="submit" class="btn eventures-bg-color">Create Event</button>
+    </div>
+</form>
