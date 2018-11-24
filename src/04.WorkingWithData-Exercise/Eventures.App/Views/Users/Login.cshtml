@@ -1,0 +1,35 @@
+﻿@model Eventures.App.ViewModels.Users.LoginViewModel
+
+<h1 class="text-center">Login</h1>
+<hr class="half-width" />
+<form class="mx-auto half-width" asp-controller="users" asp-action="login" method="post">
+    <div class="form-group">
+        <div class="text-center font-weight-bold">
+            <label asp-for="Username"></label>
+        </div>
+        <input asp-for="Username" type="text" class="form-control" placeholder="Username...">
+        <span class="font-weight-bold" asp-validation-for="Username"></span>
+    </div>
+    <div class="form-group font-weight-bold">
+        <div class="text-center">
+            <label asp-for="Password"></label>
+        </div>
+        <input asp-for="Password" type="password" class="form-control" placeholder="Password...">
+        <span class="font-weight-bold" asp-validation-for="Password"></span>
+    </div>
+    <hr />
+    <div class="text-center">
+        <input type="checkbox" />
+        <label>Remember me?</label>
+    </div>
+    <hr />
+    <div class="button-holder d-flex justify-content-center">
+        <button type="submit" class="btn eventures-bg-color">Login</button>
+    </div>
+</form>
+<div class="text-center login">
+    <a href="">Forgot your Password?</a>
+</div>
+<div class="text-center login">
+    <a href="">Register as a new user</a>
+</div>

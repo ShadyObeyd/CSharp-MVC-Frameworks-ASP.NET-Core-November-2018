@@ -1,0 +1,14 @@
+﻿<div class="jumbotron mt-3 eventures-bg-color">
+    @if (this.User.IsInRole("Admin"))
+    {
+        <h1 class="text-center">Greetings, Administrator - @this.User.Identity.Name!</h1>
+        <hr style="background-color: gray" />
+        <h4 class="text-center" style="color: gray">Enjoy your work.</h4>
+    }
+    else
+    {
+        <h1 class="text-center">Welcome, @this.User.Identity.Name!</h1>
+        <hr style="background-color: gray" />
+        <h4 class="text-center" style="color: gray">Eventures whishes you an exciting experience.</h4>
+    }
+</div>
