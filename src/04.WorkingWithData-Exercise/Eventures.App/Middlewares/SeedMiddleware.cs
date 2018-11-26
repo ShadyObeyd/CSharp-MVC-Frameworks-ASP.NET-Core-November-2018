@@ -48,7 +48,7 @@ namespace Eventures.App.Middlewares
                     UCN = "9812116358"
                 };
 
-                var result = signInManager.UserManager.CreateAsync(user).Result;
+                var result = signInManager.UserManager.CreateAsync(user, "123456").Result;
 
                 var roleResult = signInManager.UserManager.AddToRoleAsync(user, "Admin").Result;
             }
