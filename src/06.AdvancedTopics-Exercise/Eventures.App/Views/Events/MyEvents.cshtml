@@ -1,0 +1,31 @@
+﻿@using Eventures.App.ViewModels.Events
+@model List<MyEventsViewModel>
+
+<h1 class="text-center">My Events</h1>
+<hr />
+<table class="table w-75 mx-auto">
+    <thead>
+        <tr class="row">
+            <th class="col-md-1 font-weight-bold">#</th>
+            <th class="col-md-3 font-weight-bold">Name</th>
+            <th class="col-md-3 font-weight-bold">Start</th>
+            <th class="col-md-3 font-weight-bold">End</th>
+            <th class="col-md-2 font-weight-bold">Tickets</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var index = 1;}
+        @foreach (var eventt in Model)
+        {
+            <tr class="row">
+                <th class="col-md-1">@index</th>
+                <th class="col-md-3">@eventt.Name</th>
+                <td class="col-md-3">@eventt.StartToStr</td>
+                <td class="col-md-3">@eventt.EndToStr</td>
+                <td class="col-md-2">@eventt.Tickets</td>
+            </tr>
+            { index++; }
+        }
+    </tbody>
+</table>
+<hr />

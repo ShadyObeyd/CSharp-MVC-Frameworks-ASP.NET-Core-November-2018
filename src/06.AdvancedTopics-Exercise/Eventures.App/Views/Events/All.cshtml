@@ -1,0 +1,42 @@
+﻿@using Eventures.App.ViewModels.Events
+@model List<AllEventsViewModel>
+
+<h1 class="text-center">All Events</h1>
+<hr />
+<table class="table w-75 mx-auto">
+    <thead>
+        <tr class="row">
+            <th class="col-md-1 font-weight-bold">#</th>
+            <th class="col-md-2 font-weight-bold">Name</th>
+            <th class="col-md-2 font-weight-bold">Start</th>
+            <th class="col-md-2 font-weight-bold">End</th>
+            <th class="col-md-1 font-weight-bold">Place</th>
+            <th class="col-md-4 font-weight-bold">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var index = 1;}
+        @foreach (var eventt in Model)
+        {
+            <tr class="row">
+                <th class="col-md-1">@index</th>
+                <th class="col-md-2">@eventt.Name</th>
+                <td class="col-md-2">@eventt.StartToStr</td>
+                <td class="col-md-2">@eventt.EndToStr</td>
+                <td class="col-md-1">@eventt.Place</td>
+                <td class="col-md-4">
+                    <form class="form-inline" asp-controller="Orders" asp-action="Create" method="post">
+                        <input class="eventId" name="eventId" value="@eventt.Id" hidden/>
+                        <label class="font-weight-bold">Tickets</label>
+                        <input type="number" name="ticketsCount" id="ticketsCount" />
+                        <div class="button-holder d-flex">
+                            <button type="submit" class="btn eventures-bg-color">Order</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            { index++; }
+        }
+    </tbody>
+</table>
+<hr />
