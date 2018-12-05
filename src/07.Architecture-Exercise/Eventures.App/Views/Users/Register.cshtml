@@ -1,0 +1,66 @@
+﻿@model Eventures.App.ViewModels.Users.RegisterViewModel
+
+<h1 class="text-center">Register</h1>
+<hr style="width: 30%" />
+<form class="mx-auto half-width" asp-controller="users" asp-action="register" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="Username"></label>
+            </div>
+            <input asp-for="Username" type="text" class="form-control" placeholder="Username..." />
+            <span class="font-weight-bold" asp-validation-for="Username"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label class="font-weight-bold" asp-for="Email"></label>
+            </div>
+            <input asp-for="Email" type="email" class="form-control" placeholder="Email..." />
+            <span class="font-weight-bold" asp-validation-for="Email"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="Password"></label>
+            </div>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Password..." />
+            <span class="font-weight-bold" asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="ConfirmPassword"></label>
+            </div>
+            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password..." />
+            <span class="font-weight-bold" asp-validation-for="ConfirmPassword"></span>
+        </div>
+    </div>
+    <hr />
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="FirstName"></label>
+            </div>
+            <input asp-for="FirstName" type="text" class="form-control" placeholder="First Name..." />
+        </div>
+        <div class="form-group col-md-6">
+            <div class="text-center font-weight-bold">
+                <label asp-for="LastName"></label>
+            </div>
+            <input asp-for="LastName" type="text" class="form-control" placeholder="Last Name..." />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <div class="text-center font-weight-bold">
+                <label asp-for="UCN"></label>
+            </div>
+            <input asp-for="UCN" type="text" class="form-control" placeholder="UCN..." />
+            <span class="font-weight-bold" asp-validation-for="UCN"></span>
+        </div>
+    </div>
+    <hr />
+    <div class="button-holder d-flex justify-content-center" style="margin-bottom: 20px">
+        <button type="submit" class="btn eventures-bg-color">Register</button>
+    </div>
+</form>

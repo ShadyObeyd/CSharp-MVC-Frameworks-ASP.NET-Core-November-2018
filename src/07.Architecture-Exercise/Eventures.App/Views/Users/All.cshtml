@@ -1,0 +1,70 @@
+﻿@using Eventures.App.ViewModels.Users
+
+@model AllUsersViewModel
+
+<h1 class="text-center">Application Users</h1>
+<hr />
+<h2 class="text-center">Administrators</h2>
+<table class="table w-75 mx-auto">
+    <thead>
+        <tr class="row">
+            <th class="col-md-3 font-weight-bold">#</th>
+            <th class="col-md-3 font-weight-bold">Username</th>
+            <th class="col-md-3 font-weight-bold">Role</th>
+            <th class="col-md-3 font-weight-bold">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var adminIndex = 1;}
+        @foreach (var admin in Model.Admins)
+        {
+        <tr class="row">
+            <th class="col-md-3">@adminIndex</th>
+            <th class="col-md-3">@admin.Username</th>
+            <td class="col-md-3">@admin.Role</td>
+            <td class="col-md-3">
+                <form class="form-inline" asp-controller="Users" asp-action="Demote" method="post">
+                    <input class="adminId" name="adminId" value="@admin.Id" hidden />
+                    <div class="button-holder d-flex">
+                        <button type="submit" class="btn eventures-bg-color">Demote</button>
+                    </div>
+                </form>
+            </td>
+        </tr>
+            { adminIndex++; }
+        }
+    </tbody>
+</table>
+<hr />
+<h2 class="text-center">Users</h2>
+<table class="table w-75 mx-auto">
+    <thead>
+        <tr class="row">
+            <th class="col-md-3 font-weight-bold">#</th>
+            <th class="col-md-3 font-weight-bold">Username</th>
+            <th class="col-md-3 font-weight-bold">Role</th>
+            <th class="col-md-3 font-weight-bold">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var userIndex = 1;}
+        @foreach (var user in Model.Users)
+        {
+        <tr class="row">
+            <th class="col-md-3">@userIndex</th>
+            <th class="col-md-3">@user.Username</th>
+            <td class="col-md-3">@user.Role</td>
+            <td class="col-md-3">
+                <form class="form-inline" asp-controller="Users" asp-action="Promote" method="post">
+                    <input class="userId" name="userId" value="@user.Id" hidden />
+                    <div class="button-holder d-flex">
+                        <button type="submit" class="btn eventures-bg-color">Promote</button>
+                    </div>
+                </form>
+            </td>
+        </tr>
+            { userIndex++; }
+        }
+    </tbody>
+</table>
+<hr />
