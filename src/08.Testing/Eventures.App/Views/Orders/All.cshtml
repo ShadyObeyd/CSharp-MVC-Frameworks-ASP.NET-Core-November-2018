@@ -1,0 +1,29 @@
+﻿@using Eventures.App.ViewModels.Orders
+@model List<AllOrdersViewModel>
+
+<h1 class="text-center">All Orders</h1>
+<hr />
+<table class="table w-75 mx-auto">
+    <thead>
+        <tr class="row">
+            <th class="col-md-1 font-weight-bold">#</th>
+            <th class="col-md-5 font-weight-bold">Event</th>
+            <th class="col-md-3 font-weight-bold">Customer</th>
+            <th class="col-md-3 font-weight-bold">Ordered On</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var index = 1;}
+        @foreach (var order in Model)
+        {
+            <tr class="row">
+                <th class="col-md-1">@index</th>
+                <th class="col-md-5">@order.EventName</th>
+                <td class="col-md-3">@order.CustomerName</td>
+                <td class="col-md-3">@order.OrderedOnStr</td>
+            </tr>
+            { index++; }
+        }
+    </tbody>
+</table>
+<hr />
